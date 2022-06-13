@@ -1,11 +1,12 @@
 #include <iostream>
 #include "hello.h"
+#include <fmt/color.h>
 
 void hello(){
     #ifdef NDEBUG
-    std::cout << "hello/1.0: Hello World Release!\n";
+    fmt::print(fg(fmt::color::crimson) | fmt::emphasis::bold, "hello/1.0: Hello World Release!\n");
     #else
-    std::cout << "hello/1.0: Hello World Debug!\n";
+    fmt::print(fg(fmt::color::crimson) | fmt::emphasis::bold, "hello/1.0: Hello World Debug!\n");
     #endif
 
     // ARCHITECTURES
