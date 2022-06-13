@@ -49,7 +49,7 @@ void hello(){
     #endif
 
     #if __GNUC__
-    fmt::print(fg(fmt::color::papaya_whip), "  hello/1.0: __GNUC__ {}\n", __GNUC__);
+    fmt::print(fg(fmt::color::violet), "  hello/1.0: __GNUC__ {}\n", __GNUC__);
     #endif
 
     #if __GNUC_MINOR__
@@ -57,15 +57,15 @@ void hello(){
     #endif
 
     #if __clang_major__
-    fmt::print(fg(fmt::color::papaya_whip), "  hello/1.0: __clang_major__ {}\n", __clang_major__);
+    fmt::print(fg(fmt::color::yellow_green), "  hello/1.0: __clang_major__ {}\n", __clang_major__);
     #endif
 
     #if __clang_minor__
-    fmt::print(fg(fmt::color::papaya_whip), "  hello/1.0: __clang_minor__ {}\n", __clang_minor__);
+    fmt::print(fg(fmt::color::thistle), "  hello/1.0: __clang_minor__ {}\n", __clang_minor__);
     #endif
 
     #if __apple_build_version__
-    fmt::print(fg(fmt::color::papaya_whip), "  hello/1.0: __apple_build_version__ {}\n", __apple_build_version__);
+    fmt::print(fg(fmt::color::sandy_brown), "  hello/1.0: __apple_build_version__ {}\n", __apple_build_version__);
     #endif
 
     // SUBSYSTEMS
