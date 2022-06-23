@@ -7,6 +7,9 @@ add_library(hello src/hello.cpp)
 target_include_directories(hello PUBLIC include)
 set_target_properties(hello PROPERTIES PUBLIC_HEADER "include/hello.h")
 
-target_link_libraries(hello fmt::fmt)
+if (WITH_FMT)
+    target_link_libraries(hello fmt::fmt)
+    target_compile_definitions(hello USING_FMT=1)
+endif()
 
 install(TARGETS hello)
