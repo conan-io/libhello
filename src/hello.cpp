@@ -1,4 +1,3 @@
-#include <format>
 #include <iostream>
 
 #include "hello.h"
@@ -8,7 +7,8 @@
 #endif
 
 std::string compose_message(std::string build_type, std::string extra_info) {
-    return std::format("hello/1.0: Hello World {}! ({})\n", build_type, extra_info);
+    std::string ret = std::string("hello/1.0: Hello World ") + build_type + std::string("! (") + extra_info + std::string(")\n");
+    return ret;
 }
 
 void hello(){
