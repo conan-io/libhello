@@ -12,4 +12,8 @@ if (WITH_FMT)
     target_compile_definitions(hello PRIVATE USING_FMT=1)
 endif()
 
+if (BUILD_TESTS)
+    add_subdirectory(tests)
+endif()
+
 install(TARGETS hello)
