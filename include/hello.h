@@ -1,5 +1,6 @@
 #pragma once
 
+#include <string>
 
 #ifdef _WIN32
   #define HELLO_EXPORT __declspec(dllexport)
