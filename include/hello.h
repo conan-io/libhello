@@ -10,4 +10,4 @@
 
 HELLO_EXPORT void hello();
 
-HELLO_EXPORT std::string compose_message(std::string build_type, std::string extra_info);
+HELLO_EXPORT std::string compose_message(const std::string& build_type, const std::string& extra_info);
