@@ -12,7 +12,7 @@ if (WITH_FMT)
     target_compile_definitions(hello PRIVATE USING_FMT=1)
 endif()
 
-if (BUILD_TESTS)
+if (NOT BUILD_TESTING EQUAL OFF)
     add_subdirectory(tests)
 endif()
 
