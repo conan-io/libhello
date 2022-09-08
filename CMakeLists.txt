@@ -12,9 +12,7 @@ if (WITH_FMT)
     target_compile_definitions(hello PRIVATE USING_FMT=1)
 endif()
 
-message("---->>${BUILD_TESTING}")
-
-if (NOT BUILD_TESTING EQUAL OFF)
+if (NOT BUILD_TESTING STREQUAL OFF)
     add_subdirectory(tests)
 endif()
 
