@@ -1,11 +1,12 @@
 cmake_minimum_required(VERSION 3.15)
 project(hello CXX)
 
+add_library(hello src/hello.cpp)
 
 if (BUILD_SHARED_LIBS)
-    add_library(hello src/hello.cpp)
+    set_target_properties(hello PROPERTIES LIBRARY_OUTPUT_NAME hello-shared)
 else()
-    add_library(hello-static src/hello.cpp)
+    set_target_properties(hello PROPERTIES LIBRARY_OUTPUT_NAME hello-static)
 endif()
 
 target_include_directories(hello PUBLIC include)
