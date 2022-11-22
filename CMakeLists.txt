@@ -4,9 +4,9 @@ project(hello CXX)
 add_library(hello src/hello.cpp)
 
 if (BUILD_SHARED_LIBS)
-    set_target_properties(hello PROPERTIES LIBRARY_OUTPUT_NAME hello-shared)
+    set_target_properties(hello PROPERTIES OUTPUT_NAME hello-shared)
 else()
-    set_target_properties(hello PROPERTIES LIBRARY_OUTPUT_NAME hello-static)
+    set_target_properties(hello PROPERTIES OUTPUT_NAME hello-static)
 endif()
 
 target_include_directories(hello PUBLIC include)
